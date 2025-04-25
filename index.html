@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bualgas - Servicios Profesionales de Gas</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#e67e22", secondary: "#2980b9" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+    <style>
+      :where([class^="ri-"])::before { content: "\f3c2"; }
+      body {
+      font-family: 'Montserrat', sans-serif;
+      }
+      .hero-section {
+      position: relative;
+      height: 600px;
+      overflow: hidden;
+      }
+      .hero-slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+      background-size: cover;
+      background-position: center;
+      }
+      .hero-slide.active {
+      opacity: 1;
+      }
+      .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, rgba(230, 126, 34, 0.9) 0%, rgba(230, 126, 34, 0.7) 50%, rgba(230, 126, 34, 0.2) 100%);
+      }
+      .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+      }
+      input:focus, textarea:focus {
+      outline: none;
+      border-color: #0056b3;
+      }
+      .language-switch input:checked + .slider {
+      background-color: #0056b3;
+      }
+      .language-switch input:checked + .slider:before {
+      transform: translateX(26px);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Barra de navegación -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+      <div class="container mx-auto px-4 py-3">
+        <div class="flex justify-between items-center">
+          <div class="flex items-center">
+            <a
+              <a href="#" id="logo" class="block relative group" title="Volver al inicio">
+  <span
+    class="relative font-['Pacifico'] text-4xl text-black inline-block transition-transform duration-300 hover:scale-105 active:scale-95"
+  >
+    Bualgas
+  </span>
+</a>
+
+          </div>
+          <nav class="hidden md:flex space-x-8">
+            <a
+              href="#inicio"
+              class="text-gray-700 hover:text-primary font-medium"
+              >Inicio</a
+            >
+            <a
+              href="#servicios"
+              class="text-gray-700 hover:text-primary font-medium"
+              >Servicios</a
+            >
+            <a
+              href="#ventajas"
+              class="text-gray-700 hover:text-primary font-medium"
+              >Por qué elegirnos</a
+            >
+            <a
+              href="#contacto"
+              class="text-gray-700 hover:text-primary font-medium"
+              >Contacto</a
+            >
+          </nav>
+          <div class="flex items-center space-x-4">
+            <div
+              id="languageSwitch"
+              class="language-switch relative inline-flex items-center"
+            >
+              <div class="switch-labels flex items-center">
+                <span
+                  class="switch-label-es mr-2 text-sm font-medium text-gray-700"
+                  >ES</span
+                >
+              </div>
+              <label class="switch">
+                <input
+                  type="checkbox"
+                  class="opacity-0 w-0 h-0"
+                  id="languageToggle"
+                />
+                <span
+                  class="slider w-14 h-7 bg-gray-300 rounded-full relative inline-block transition-all duration-300 cursor-pointer"
+                >
+                  <span
+                    class="switch-circle absolute top-1 left-1 w-5 h-5 bg-white rounded-full transition-all duration-300"
+                  ></span>
+                </span>
+              </label>
+              <div class="switch-labels flex items-center">
+                <span
+                  class="switch-label-en ml-2 text-sm font-medium text-gray-400"
+                  >EN</span
+                >
+              </div>
+            </div>
+            <a
+              href="#contacto"
+              class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-primary/90 transition-all whitespace-nowrap"
+              >Solicitar Presupuesto</a
+            >
+            <button
+              class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700"
+            >
+              <i class="ri-menu-line ri-lg"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-section">
+      <div
+        class="hero-slide active"
+        style="background-image: url('https://readdy.ai/api/search-image?query=Middle-aged%20experienced%20gas%20technician%20in%20his%2050s%20with%20grey%20hair%20and%20professional%20appearance%2C%20wearing%20orange%20safety%20uniform%2C%20installing%20modern%20gas%20system%2C%20working%20with%20tools%2C%20clean%20industrial%20environment%2C%20warm%20lighting%2C%20technical%20setting%2C%20showing%20expertise%20and%20confidence&width=1920&height=800&seq=11&orientation=landscape')"
+      >
+        <div class="hero-overlay"></div>
+      </div>
+      <div
+        class="hero-slide"
+        style="background-image: url('https://readdy.ai/api/search-image?query=Close%20up%20of%20traditional%20Spanish%20orange%20butane%20gas%20bottles%2C%20multiple%2012.5kg%20propane%20cylinders%20arranged%20in%20rows%2C%20industrial%20setting%2C%20clean%20professional%20environment%2C%20bright%20lighting%2C%20showing%20the%20distinctive%20orange%20color%20and%20safety%20features%20of%20Spanish%20gas%20bottles&width=1920&height=800&seq=15&orientation=landscape')"
+      >
+        <div class="hero-overlay"></div>
+      </div>
+      <div
+        class="hero-slide"
+        style="background-image: url('https://readdy.ai/api/search-image?query=Modern%20eco-friendly%20concept%20illustration%20with%20wind%20turbines%2C%20green%20houses%20and%20world%20map%2C%20showing%20renewable%20energy%20and%20sustainability%2C%20white%20silhouettes%20of%20wind%20turbines%20and%20trees%20on%20a%20half%20globe%20with%20Europe%20and%20Africa%20visible%2C%20clean%20professional%20design%20with%20soft%20gradient%20background%2C%20butterflies%20floating%20around&width=1920&height=800&seq=13&orientation=landscape')"
+      >
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="container mx-auto px-4 py-24 relative z-10">
+        <div class="w-full md:w-1/2 text-white">
+          <div class="bg-primary/10 backdrop-blur-sm p-8 rounded-lg">
+            <h1
+              class="text-4xl md:text-5xl font-bold mb-4"
+              data-translate="hero-title"
+            >
+              BUALGAS S.A<br />
+              Mas de 40 años de experiencia en el sector energético
+            </h1>
+            <p class="text-lg mb-8">
+              Especialistas en instalaciones de gas propano, gas natural,
+              calefacción, climatización y energías renovables. Soluciones
+              integrales con los más altos estándares de calidad.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a
+                href="#contacto"
+                class="bg-secondary text-white px-8 py-3 !rounded-button font-medium hover:bg-secondary/90 transition-all text-center whitespace-nowrap"
+                >Solicitar Servicio</a
+              >
+              <a
+                href="tel:+34911234567"
+                class="bg-white text-primary px-8 py-3 !rounded-button font-medium hover:bg-gray-100 transition-all flex items-center justify-center gap-2 whitespace-nowrap"
+              >
+                <i class="ri-phone-fill ri-lg"></i> Emergencias: INDICAR TLF
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Sección de Servicios -->
+    <section id="servicios" class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">
+            Nuestros Servicios Profesionales
+          </h2>
+          <p class="text-gray-600 max-w-3xl mx-auto">
+            Ofrecemos soluciones completas para todas sus necesidades
+            relacionadas con el gas, garantizando seguridad, eficiencia y
+            cumplimiento normativo.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Servicio 1 -->
+          <div
+            class="service-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300"
+          >
+            <div class="h-48 overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=Professional%20gas%20installation%20with%20modern%20equipment%2C%20propane%20and%20natural%20gas%20systems%2C%20technical%20environment%2C%20clean%20workspace%2C%20bright%20lighting&width=600&height=400&seq=8&orientation=landscape"
+                alt="Instalaciones de Gas"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <div
+                class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-4"
+              >
+                <i class="ri-gas-station-fill ri-lg text-primary"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800 mb-2">
+                Instalaciones de Gas
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Proyectos e instalaciones de gas propano y gas natural.
+                Ejecución, reforma y ampliación de instalaciones para hogares y
+                empresas.
+              </p>
+              <a
+                href="#contacto"
+                class="text-primary font-medium flex items-center"
+              >
+                Más información <i class="ri-arrow-right-line ml-2"></i>
+              </a>
+            </div>
+          </div>
+          <!-- Servicio 2 -->
+          <div
+            class="service-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300"
+          >
+            <div class="h-48 overflow-hidden">
+               <img
+                src="https://readdy.ai/api/search-image?query=Professional%20gas%20delivery%20service%2C%20orange%20butane%20gas%20cylinders%20being%20delivered%20to%20home%2C%20delivery%20van%20with%20gas%20bottles%2C%20clean%20and%20professional%20service%20presentation&width=600&height=400&seq=12&orientation=landscape"
+                alt="Reparto a Domicilio"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <div
+                class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-4"
+              >
+                <i class="ri-truck-fill ri-lg text-primary"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800 mb-2">
+                Reparto a Domicilio
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Servicio de entrega de gas envasado a domicilio. Rápido, seguro
+                y puntual para su comodidad.
+              </p>
+              <a
+                href="#contacto"
+                class="text-primary font-medium flex items-center"
+              >
+                Más información <i class="ri-arrow-right-line ml-2"></i>
+              </a>
+            </div>
+          </div>
+          <!-- Servicio 3 -->
+          <div
+            class="service-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300"
+          >
+            <div class="h-48 overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=Solar%20panels%20and%20renewable%20energy%20installation%2C%20modern%20sustainable%20technology%2C%20professional%20setup%2C%20clean%20environment&width=600&height=400&seq=10&orientation=landscape"
+                alt="Energías Renovables"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <div
+                class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-4"
+              >
+                <i class="ri-sun-fill ri-lg text-primary"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800 mb-2">
+                Energías Renovables
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Instalación de sistemas de energía solar y soluciones
+                renovables. Auditorías energéticas y proyectos sostenibles.
+              </p>
+              <a
+                href="#contacto"
+                class="text-primary font-medium flex items-center"
+              >
+                Más información <i class="ri-arrow-right-line ml-2"></i>
+              </a>
+            </div>
+          </div>
+          <!-- Servicio 4 -->
+          <div
+            class="service-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300"
+          >
+            <div class="h-48 overflow-hidden">
+             <img
+                src="https://readdy.ai/api/search-image?query=Modern%20heating%20and%20air%20conditioning%20systems%20installation%2C%20professional%20HVAC%20equipment%2C%20technical%20setting%2C%20clean%20environment&width=600&height=400&seq=9&orientation=landscape"
+                alt="Calefacción y Climatización"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <div
+                class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-4"
+              >
+                <i class="ri-temp-hot-fill ri-lg text-primary"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800 mb-2">
+                Calefacción y Climatización
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Instalación y mantenimiento de sistemas de calefacción y
+                climatización. Soluciones eficientes para su confort térmico.
+              </p>
+              <a
+                href="#contacto"
+                class="text-primary font-medium flex items-center"
+              >
+                Más información <i class="ri-arrow-right-line ml-2"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Sección de Ventajas -->
+    <section id="ventajas" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">
+            ¿Por qué elegir Bualgas?
+          </h2>
+          <p class="text-gray-600 max-w-3xl mx-auto">
+            Nos distinguimos por ofrecer un servicio de máxima calidad con
+            profesionales altamente cualificados y comprometidos con su
+            seguridad.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Ventaja 1 -->
+          <div class="bg-white p-8 rounded-lg shadow-md">
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="ri-shield-check-fill ri-2x text-primary"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3">
+              Profesionales Certificados
+            </h3>
+            <p class="text-gray-600">
+              Todos nuestros técnicos cuentan con certificaciones oficiales y
+              años de experiencia en el sector del gas.
+            </p>
+          </div>
+          <!-- Ventaja 2 -->
+          <div class="bg-white p-8 rounded-lg shadow-md">
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="ri-time-fill ri-2x text-primary"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3">Servicio 24/7</h3>
+            <p class="text-gray-600">
+              Disponibles todos los días del año para atender emergencias
+              relacionadas con el gas en cualquier momento.
+            </p>
+          </div>
+          <!-- Ventaja 3 -->
+          <div class="bg-white p-8 rounded-lg shadow-md">
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="ri-price-tag-3-fill ri-2x text-primary"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3">
+              Precios Transparentes
+            </h3>
+            <p class="text-gray-600">
+              Presupuestos claros y detallados sin costes ocultos. Conocerá el
+              precio exacto antes de iniciar cualquier trabajo.
+            </p>
+          </div>
+          <!-- Ventaja 4 -->
+          <div class="bg-white p-8 rounded-lg shadow-md">
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="ri-tools-fill ri-2x text-primary"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3">
+              Equipamiento Avanzado
+            </h3>
+            <p class="text-gray-600">
+              Utilizamos las herramientas y tecnologías más modernas para
+              diagnósticos precisos y reparaciones eficientes.
+            </p>
+          </div>
+          <!-- Ventaja 5 -->
+          <div class="bg-white p-8 rounded-lg shadow-md">
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="ri-customer-service-2-fill ri-2x text-primary"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3">
+              Atención Personalizada
+            </h3>
+            <p class="text-gray-600">
+              Cada cliente recibe un trato único y adaptado a sus necesidades
+              específicas con seguimiento post-servicio.
+            </p>
+          </div>
+          <!-- Ventaja 6 -->
+          <div class="bg-white p-8 rounded-lg shadow-md">
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="ri-award-fill ri-2x text-primary"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3">
+              Garantía en Todos los Trabajos
+            </h3>
+            <p class="text-gray-600">
+              Ofrecemos garantía en todas nuestras instalaciones y reparaciones
+              para su total tranquilidad.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">
+            Contacte con Nosotros
+          </h2>
+          <p class="text-gray-600 max-w-3xl mx-auto">
+            Estamos a su disposición para resolver cualquier duda o solicitud.
+            Contáctenos y le responderemos a la mayor brevedad posible.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div>
+            <form class="space-y-6">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label
+                    for="nombre"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Nombre</label
+                  >
+                  <input
+                    type="text"
+                    id="nombre"
+                    class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-primary/20"
+                    placeholder="Su nombre"
+                    data-translate="name"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="telefono"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Teléfono</label
+                  >
+                  <input
+                    type="tel"
+                    id="telefono"
+                    class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-primary/20"
+                    placeholder="Su teléfono"
+                  />
+                </div>
+              </div>
+              <div>
+                <label
+                  for="email"
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-primary/20"
+                  placeholder="Su email"
+                />
+              </div>
+              <div>
+                <label
+                  for="servicio"
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                  >Servicio que necesita</label
+                >
+                <div class="relative">
+                  <select
+                    id="servicio"
+                    class="w-full px-4 py-3 border border-gray-300 rounded appearance-none focus:ring-2 focus:ring-primary/20 pr-8"
+                  >
+                    <option value="">Seleccione un servicio</option>
+                    <option value="instalacion">Instalación de Gas</option>
+                    <option value="mantenimiento">Mantenimiento</option>
+                    <option value="reparacion">Reparación</option>
+                    <option value="certificacion">Certificación</option>
+                    <option value="otro">Otro</option>
+                  </select>
+                  <div
+                    class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none"
+                  >
+                    <i class="ri-arrow-down-s-line text-gray-400"></i>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <label
+                  for="mensaje"
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                  >Mensaje</label
+                >
+                <textarea
+                  id="mensaje"
+                  rows="4"
+                  class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-primary/20"
+                  placeholder="Describa su consulta o necesidad"
+                ></textarea>
+              </div>
+              <div>
+                <button
+                  type="submit"
+                  class="w-full bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-primary/90 transition-all whitespace-nowrap"
+                >
+                  Enviar Mensaje
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="space-y-8">
+            <div class="bg-gray-50 p-8 rounded-lg">
+              <h3 class="text-xl font-bold text-gray-800 mb-4">
+                Información de Contacto
+              </h3>
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-4"
+                  >
+                    <i class="ri-map-pin-fill text-primary"></i>
+                  </div>
+                  <div>
+                    <p class="font-medium text-gray-800">Dirección</p>
+                    <p class="text-gray-600">
+                      C. Naranjo, 1, 30011 Murcia, España
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-4"
+                  >
+                    <i class="ri-phone-fill text-primary"></i>
+                  </div>
+                  <div>
+                    <p class="font-medium text-gray-800">Teléfono</p>
+                    <p class="text-gray-600"><p>+34 968350035</p></p>
+                    <p class="text-gray-600">
+                      <p>+34 poner tlf normal</p> (Emergencias 24h)
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-4"
+                  >
+                    <i class="ri-mail-fill text-primary"></i>
+                  </div>
+                  <div>
+                    <p class="font-medium text-gray-800">Email</p>
+                    <p class="text-gray-600">info@bualgas.es</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-4"
+                  >
+                    <i class="ri-time-fill text-primary"></i>
+                  </div>
+                  <div>
+                    <p class="font-medium text-gray-800">Horario de Atención</p>
+                    <p class="text-gray-600">Lunes a Viernes: 7:00 - 15:00</p>
+                    <p class="text-gray-600">Sábados: 9:00 - 14:00</p>
+                    <p class="text-gray-600">Servicio de Emergencias: 24/7</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-full h-96 rounded-xl overflow-hidden shadow-lg">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3145.136567149353!2d-1.1189120235801793!3d37.97394210066147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd63789ffd8e3f19%3A0x2d731a067c8b79d4!2sBualgas%20S.A.!5e0!3m2!1ses!2ses!4v1745597335793!5m2!1ses!2ses"
+    width="100%"
+    height="100%"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+  ></iframe>
+</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold text-white mb-6">
+          ¿Necesita un servicio urgente?
+        </h2>
+        <p class="text-white/90 text-lg mb-8 max-w-3xl mx-auto">
+          Nuestro equipo de técnicos certificados está disponible 24/7 para
+          atender cualquier emergencia relacionada con el gas.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a
+            href="tel:+34600123456"
+            class="bg-white text-primary px-8 py-3 !rounded-button font-medium hover:bg-gray-100 transition-all flex items-center justify-center gap-2 whitespace-nowrap"
+          >
+            <i class="ri-phone-fill"></i> Llamar ahora: Indicar tlf.
+          </a>
+          <a
+            href="#contacto"
+            class="bg-secondary text-white px-8 py-3 !rounded-button font-medium hover:bg-secondary/90 transition-all whitespace-nowrap"
+            >Solicitar Presupuesto</a
+          >
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <div>
+            <a href="#" class="block mb-4">
+              <span class="font-['Pacifico'] text-3xl text-white">Bualgas</span>
+            </a>
+            <p class="text-gray-400 mb-6">
+              Servicios profesionales de gas con más de 40 años de experiencia
+              en el sector. Garantizamos calidad, seguridad y confianza en todos
+              nuestros trabajos.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-all"
+              >
+                <i class="ri-facebook-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-all"
+              >
+                <i class="ri-instagram-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-all"
+              >
+                <i class="ri-twitter-x-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-all"
+              >
+                <i class="ri-linkedin-fill"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-6">Enlaces Rápidos</h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#inicio"
+                  class="text-gray-400 hover:text-white transition-all"
+                  >Inicio</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#servicios"
+                  class="text-gray-400 hover:text-white transition-all"
+                  >Servicios</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#ventajas"
+                  class="text-gray-400 hover:text-white transition-all"
+                  >Por qué elegirnos</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contacto"
+                  class="text-gray-400 hover:text-white transition-all"
+                  >Contacto</a
+                >
+              </li>                      
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-6">Servicios</h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-all"
+                  >Instalación de Gas</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-all"
+                  >Reparto a domicilio</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-all"
+                  >Reparaciones</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-all"
+                  >Certificaciones</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-all"
+                  >Revisiones Obligatorias</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-all"
+                  >Emergencias 24h</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-6">Contacto</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start">
+                <i class="ri-map-pin-fill text-primary mr-3 mt-1"></i>
+                <span class="text-gray-400"
+                  >C. Naranjo, 1, 30011 Murcia, España</span
+                >
+              </li>
+              <li class="flex items-start">
+                <i class="ri-phone-fill text-primary mr-3 mt-1"></i>
+                <span class="text-gray-400">+34 968 350 350</span>
+              </li>
+              <li class="flex items-start">
+                <i class="ri-mail-fill text-primary mr-3 mt-1"></i>
+                <span class="text-gray-400">info@bualgas.es</span>
+              </li>
+              <li class="flex items-start">
+                <i class="ri-time-fill text-primary mr-3 mt-1"></i>
+                <span class="text-gray-400"
+                  >Lun-Vie: 7:00 - 15:00
+                  <br />Sáb: 9:00 - 14:00</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-gray-800 pt-8">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+              <p class="text-gray-500 text-sm">
+                © 2025 Bualgas. Todos los derechos reservados.
+              </p>
+            </div>
+           <div class="flex flex-wrap justify-center gap-6 text-sm text-gray-500">
+  <button ondblclick="mostrarAviso('privacidad')" class="hover:text-white transition-all">Política de Privacidad</button>
+  <button ondblclick="mostrarAviso('terminos')" class="hover:text-white transition-all">Términos y Condiciones</button>
+  <button ondblclick="mostrarAviso('aviso')" class="hover:text-white transition-all">Aviso Legal</button>
+  <button ondblclick="mostrarAviso('cookies')" class="hover:text-white transition-all">Cookies</button>
+</div>
+
+            <div class="mt-4 md:mt-0 flex items-center space-x-3">
+              <img
+                src="https://readdy.ai/api/search-image?query=Gas%20certification%20badge%2C%20professional%20emblem%2C%20blue%20and%20orange%20colors%2C%20simple%20design%2C%20clean%20background&width=80&height=80&seq=6&orientation=squarish"
+                alt="Certificación"
+                class="h-10"
+              />
+              <img
+                src="https://readdy.ai/api/search-image?query=Gas%20safety%20certification%20badge%2C%20professional%20emblem%2C%20blue%20and%20orange%20colors%2C%20simple%20design%2C%20clean%20background&width=80&height=80&seq=7&orientation=squarish"
+                alt="Certificación"
+                class="h-10"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Hero slider functionality
+        function rotateSlides() {
+          const slides = document.querySelectorAll(".hero-slide");
+          let currentSlide = 0;
+          setInterval(() => {
+            slides[currentSlide].classList.remove("active");
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add("active");
+          }, 5000);
+        }
+        rotateSlides();
+        // Logo click handler
+        const logo = document.querySelector("#logo");
+        if (logo) {
+          logo.addEventListener("click", function (e) {
+            e.preventDefault();
+            const span = this.querySelector("span");
+            span.style.transform = "scale(0.95)";
+            setTimeout(() => {
+              span.style.transform = "";
+            }, 200);
+            if (window.scrollY === 0) {
+              window.location.reload();
+            } else {
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }
+          });
+        }
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href");
+            if (targetId === "#") return;
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              window.scrollTo({
+                top: targetElement.offsetTop - 80,
+                behavior: "smooth",
+              });
+            }
+          });
+        });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        // Mobile menu toggle
+        const menuButton = document.querySelector(".ri-menu-line").parentElement;
+        const mobileMenu = document.createElement("div");
+        mobileMenu.className =
+          "mobile-menu fixed inset-0 bg-gray-900/95 z-50 flex flex-col justify-center items-center transform -translate-y-full transition-transform duration-300 ease-in-out";
+        mobileMenu.innerHTML = `
+      <button class="absolute top-6 right-6 text-white w-10 h-10 flex items-center justify-center">
+      <i class="ri-close-line ri-lg"></i>
+      </button>
+      <nav class="flex flex-col space-y-6 text-center">
+      <a href="#inicio" class="text-white text-xl font-medium">Inicio</a>
+      <a href="#servicios" class="text-white text-xl font-medium">Servicios</a>
+      <a href="#ventajas" class="text-white text-xl font-medium">Por qué elegirnos</a>
+      <a href="#contacto" class="text-white text-xl font-medium">Contacto</a>
+      </nav>
+      <div class="mt-12">
+      <a href="#contacto" class="bg-primary text-white px-8 py-3 !rounded-button font-medium hover:bg-primary/90 transition-all whitespace-nowrap">Solicitar Presupuesto</a>
+      </div>
+      `;
+        document.body.appendChild(mobileMenu);
+        menuButton.addEventListener("click", function () {
+          mobileMenu.classList.remove("-translate-y-full");
+          document.body.classList.add("overflow-hidden");
+        });
+        mobileMenu
+          .querySelector(".ri-close-line")
+          .parentElement.addEventListener("click", function () {
+            mobileMenu.classList.add("-translate-y-full");
+            document.body.classList.remove("overflow-hidden");
+          });
+        mobileMenu.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function () {
+            mobileMenu.classList.add("-translate-y-full");
+            document.body.classList.remove("overflow-hidden");
+          });
+        });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        const languageToggle = document.getElementById("languageToggle");
+        const translations = {
+          es: {
+            "hero-title":
+              "BUALGAS, S.A. - 40 años de experiencia en el sector energético",
+            "hero-subtitle":
+              "Especialistas en instalaciones de gas propano, gas natural, calefacción, climatización y energías renovables. Soluciones integrales con los más altos estándares de calidad.",
+            "services-title": "Nuestros Servicios Profesionales",
+            "services-subtitle":
+              "Ofrecemos soluciones completas para todas sus necesidades relacionadas con el gas, garantizando seguridad, eficiencia y cumplimiento normativo.",
+            "why-us-title": "¿Por qué elegir Bualgas?",
+            "why-us-subtitle":
+              "Nos distinguimos por ofrecer un servicio de máxima calidad con profesionales altamente cualificados y comprometidos con su seguridad.",
+            "contact-title": "Contacte con Nosotros",
+            "contact-subtitle":
+              "Estamos a su disposición para resolver cualquier duda o solicitud. Contáctenos y le responderemos a la mayor brevedad posible.",
+            "cta-title": "¿Necesita un servicio urgente?",
+            "cta-subtitle":
+              "Nuestro equipo de técnicos certificados está disponible 24/7 para atender cualquier emergencia relacionada con el gas.",
+            "request-quote": "Solicitar Presupuesto",
+            "call-now": "Llamar ahora",
+            "send-message": "Enviar Mensaje",
+            name: "Nombre",
+            phone: "Teléfono",
+            email: "Email",
+            message: "Mensaje",
+            "service-needed": "Servicio que necesita",
+            "select-service": "Seleccione un servicio",
+            installation: "Instalación de Gas",
+            maintenance: "Mantenimiento",
+            repair: "Reparación",
+            certification: "Certificación",
+            other: "Otro",
+            copyright: "© 2025 Bualgas. Todos los derechos reservados.",
+            privacy: "Política de Privacidad",
+            terms: "Términos y Condiciones",
+            legal: "Aviso Legal",
+            cookies: "Cookies",
+          },
+          en: {
+            "hero-title":
+              "BUALGAS, S.A. - 40 years of experience in the energy sector",
+            "hero-subtitle":
+              "Specialists in propane gas, natural gas, heating, air conditioning and renewable energy installations. Comprehensive solutions with the highest quality standards.",
+            "services-title": "Our Professional Services",
+            "services-subtitle":
+              "We offer complete solutions for all your gas-related needs, ensuring safety, efficiency and regulatory compliance.",
+            "why-us-title": "Why choose Bualgas?",
+            "why-us-subtitle":
+              "We stand out for offering top quality service with highly qualified professionals committed to your safety.",
+            "contact-title": "Contact Us",
+            "contact-subtitle":
+              "We are at your disposal to resolve any questions or requests. Contact us and we will respond as soon as possible.",
+            "cta-title": "Need urgent service?",
+            "cta-subtitle":
+              "Our team of certified technicians is available 24/7 to handle any gas-related emergency.",
+            "request-quote": "Request Quote",
+            "call-now": "Call Now",
+            "send-message": "Send Message",
+            name: "Name",
+            phone: "Phone",
+            email: "Email",
+            message: "Message",
+            "service-needed": "Service Needed",
+            "select-service": "Select a service",
+            installation: "Gas Installation",
+            maintenance: "Maintenance",
+            repair: "Repair",
+            certification: "Certification",
+            other: "Other",
+            copyright: "© 2025 Bualgas. All rights reserved.",
+            privacy: "Privacy Policy",
+            terms: "Terms & Conditions",
+            legal: "Legal Notice",
+            cookies: "Cookies",
+          },
+        };
+        function setLanguagePreference(language) {
+          document.cookie = `preferredLanguage=${language}; path=/; max-age=31536000`;
+        }
+        function getLanguagePreference() {
+          const match = document.cookie.match(/preferredLanguage=([a-z]{2})/);
+          return match ? match[1] : "es";
+        }
+        function translatePage(language) {
+          document.querySelectorAll("[data-translate]").forEach((element) => {
+            const key = element.getAttribute("data-translate");
+            if (translations[language] && translations[language][key]) {
+              if (
+                element.tagName.toLowerCase() === "input" ||
+                element.tagName.toLowerCase() === "textarea"
+              ) {
+                element.placeholder = translations[language][key];
+              } else {
+                element.textContent = translations[language][key];
+              }
+            }
+          });
+          const switchLabelEs = document.querySelector(".switch-label-es");
+          const switchLabelEn = document.querySelector(".switch-label-en");
+          if (language === "en") {
+            switchLabelEs.classList.remove("text-gray-700");
+            switchLabelEs.classList.add("text-gray-400");
+            switchLabelEn.classList.remove("text-gray-400");
+            switchLabelEn.classList.add("text-gray-700");
+          } else {
+            switchLabelEs.classList.add("text-gray-700");
+            switchLabelEs.classList.remove("text-gray-400");
+            switchLabelEn.classList.add("text-gray-400");
+            switchLabelEn.classList.remove("text-gray-700");
+          }
+        }
+        function initializeLanguageSwitch() {
+          const preferredLanguage = getLanguagePreference();
+          if (preferredLanguage === "en") {
+            languageToggle.checked = true;
+            translatePage("en");
+          }
+          languageToggle.addEventListener("change", function () {
+            const language = this.checked ? "en" : "es";
+            setLanguagePreference(language);
+            translatePage(language);
+          });
+        }
+        initializeLanguageSwitch();
+      });
+    </script>
+<!-- Bocadillo Legal -->
+<div id="bocadilloLegal"
+     onmouseleave="ocultarAviso()"
+     class="hidden fixed bottom-6 left-1/2 -translate-x-1/2 bg-gray-900 text-gray-200 shadow-lg rounded-lg p-4 w-96 z-50 text-sm border border-gray-700 transition-opacity duration-300">
+</div>
+
+<script>
+  const textos = {
+    privacidad: "En Bualgas S.A. nos comprometemos a proteger la privacidad. Tus datos serán tratados según el RGPD.",
+    terminos: "Al usar nuestro sitio aceptas estos términos. Nos reservamos el derecho a modificar el contenido.",
+    aviso: "Este sitio pertenece a Bualgas S.A. con sede en Calle Ejemplo 123, Madrid. Info con carácter general.",
+    cookies: "Usamos cookies para mejorar la experiencia. Puedes desactivarlas desde tu navegador en cualquier momento."
+  };
+
+  function mostrarAviso(tipo) {
+    const div = document.getElementById("bocadilloLegal");
+    div.textContent = textos[tipo];
+    div.classList.remove("hidden", "opacity-0");
+    div.classList.add("opacity-100");
+  }
+
+  function ocultarAviso() {
+    const div = document.getElementById("bocadilloLegal");
+    div.classList.add("opacity-0");
+    setTimeout(() => div.classList.add("hidden"), 300);
+  }
+</script>
+
+  </body>
+</html>
